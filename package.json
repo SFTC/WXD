@@ -1,22 +1,23 @@
 {
-  "name": "wexd",
+  "name": "wxd",
   "version": "1.0.0",
-  "description": "> WeXD",
+  "description": "> WXD",
   "main": "index.js",
   "scripts": {
+    "dev": "NODE_ENV=development node build/compiler.js",
     "build:lib": "rm -rf dist && rm -rf lib && NODE_ENV=production node build/compiler.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SFTC/WeXD.git"
+    "url": "git+https://github.com/SFTC/WXD.git"
   },
-  "author": "",
+  "author": "SF",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SFTC/WeXD/issues"
+    "url": "https://github.com/SFTC/WXD/issues"
   },
-  "homepage": "https://github.com/SFTC/WeXD#readme",
+  "homepage": "https://github.com/SFTC/WXD#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "cross-env": "^5.2.0",

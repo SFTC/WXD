@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/button/index",
     "pages/logs/logs"
   ],
   "window": {
@@ -8,6 +9,9 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-button": "./dist/button/index"
   },
   "sitemapLocation": "sitemap.json"
 }

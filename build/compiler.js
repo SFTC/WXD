@@ -17,6 +17,9 @@ const libDir = path.resolve(__dirname, '../lib');
 // 转换成es6
 const esDir = path.resolve(__dirname, '../dist');
 
+const exampleDir = path.resolve(__dirname, '../example/dist');
+
+
 const libConfig = {
   target: 'es5',
   lib: ['es2015', 'es2017', 'dom'],
@@ -24,7 +27,7 @@ const libConfig = {
   declaration: false
 };
 
-const compileLess = dist => () =>
+const compileLess = dist => () => {
   gulp
     .src(`${src}/**/*.less`)
     .pipe(less())
@@ -43,18 +46,23 @@ const compileLess = dist => () =>
       })
     )
     .pipe(gulp.dest(dist));
+  console.log('less编译完成');
+}
 
 const compileTs = (dist, config) => () => {
   const tsProject = ts.createProject(tsConfig, config);
-  return tsProject
+  tsProject
     .src()
     .pipe(tsProject())
     .on('error', () => {})
     .pipe(gulp.dest(dist));
+  console.log('ts编译完成');
 };
 
-const copy = (dist, ext) => () =>
+const copy = (dist, ext) => () => {
   gulp.src(`${src}/**/*.${ext}`).pipe(gulp.dest(dist));
+  console.log(ext + '编译完成');
+}
 
 const compile = (dist, config) =>
   gulp.parallel(
@@ -68,11 +76,12 @@ const compile = (dist, config) =>
 if (isProduction) {
   gulp.series(compile(esDir), compile(libDir, libConfig))();
 } else {
+  console.log("开始监听文件变化");
   compile(esDir)();
 
-  gulp.watch(`${src}/**/*.ts`, compileTs(esDir));
-  gulp.watch(`${src}/**/*.less`, compileLess(esDir));
-  gulp.watch(`${src}/**/*.wxml`, copy(esDir, 'wxml'));
-  gulp.watch(`${src}/**/*.wxs`, copy(esDir, 'wxs'));
-  gulp.watch(`${src}/**/*.json`, copy(esDir, 'json'));
+  gulp.watch(`${src}/**/*.ts`, compileTs(exampleDir));
+  gulp.watch(`${src}/**/*.less`, compileLess(exampleDir));
+  gulp.watch(`${src}/**/*.wxml`, copy(exampleDir, 'wxml'));
+  gulp.watch(`${src}/**/*.wxs`, copy(exampleDir, 'wxs'));
+  gulp.watch(`${src}/**/*.json`, copy(exampleDir, 'json'));
 }
