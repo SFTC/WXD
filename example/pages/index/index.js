@@ -10,6 +10,11 @@ Page({
           icon: 'icon_button@2x.png',
           name: '按钮',
           path: 'button',
+        }, 
+        {
+          icon: 'icon_icon@2x.png',
+          name: '图标',
+          path: 'button',
         }]
       },
       {
