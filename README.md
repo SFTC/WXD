@@ -30,7 +30,7 @@ WXD 是 SF 小程序 UI 组件库，助力开发者快速搭建小程序应用�
 
 ## 使用之前
 
-使用 Vant Weapp 前，请确保你已经学习过微信官方的 [小程序简易教程](https://mp.weixin.qq.com/debug/wxadoc/dev/) 和 [自定义组件介绍](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/)。
+使用 WXD 前，请确保你已经学习过微信官方的 [小程序简易教程](https://mp.weixin.qq.com/debug/wxadoc/dev/) 和 [自定义组件介绍](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/)。
 
 ## 安装
 
@@ -48,7 +48,7 @@ yarn add vant-weapp --production
 
 ### 方式二. 下载代码
 
-直接通过 git 下载 Vant Weapp 源代码，并将`dist`目录拷贝到自己的项目中
+直接通过 git 下载 WXD 源代码，并将`dist`目录拷贝到自己的项目中
 ```bash
 git clone https://github.com/youzan/vant-weapp.git
 ```
@@ -85,7 +85,7 @@ npm run dev
 
 ## 基础库版本
 
-Vant Weapp 最低支持到小程序基础库 1.9.9 版本
+WXD 最低支持到小程序基础库 1.9.9 版本
 
 ## 微信讨论群
 

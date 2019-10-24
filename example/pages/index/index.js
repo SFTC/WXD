@@ -1,48 +1,47 @@
-//index.js
-//获取应用实例
-const app = getApp()
+import Page from '../../common/page';
 
 Page({
   data: {
     list: [{
-        title: '基础控件',
-        components: [{
-          icon: 'icon_button@2x.png',
-          name: '按钮',
-          path: 'button',
-        }, 
-        {
-          icon: 'icon_icon@2x.png',
-          name: '图标',
-          path: 'button',
-        }]
+      title: '基础控件',
+      components: [{
+        icon: 'icon_button@2x.png',
+        name: '按钮',
+        path: 'button',
       },
       {
-        title: '表单',
-        components: [{
-            icon: 'icon_RadioButton@2x.png',
-            name: '单选框',
-            path: 'radio',
-          },
-          {
-            icon: 'icon_CheckBox@2x.png',
-            name: '复选框',
-            path: 'checkbox',
-          },
-          {
-            icon: 'icon_switch@2x.png',
-            name: 'Switch开关',
-            path: 'switch',
-          },
-        ]
+        icon: 'icon_icon@2x.png',
+        name: '图标',
+        path: 'button',
+      }
+      ]
+    },
+    {
+      title: '表单',
+      components: [{
+        icon: 'icon_RadioButton@2x.png',
+        name: '单选框',
+        path: 'radio',
       },
       {
-        title: '其他',
-        components: [{
-          icon: 'icon_empty@2x.png',
-          name: '空页面'
-        }]
+        icon: 'icon_CheckBox@2x.png',
+        name: '复选框',
+        path: 'checkbox',
       },
+      {
+        icon: 'icon_switch@2x.png',
+        name: 'Switch开关',
+        path: 'switch',
+      },
+      ]
+    },
+    {
+      title: '其他',
+      components: [{
+        icon: 'icon_empty@2x.png',
+        name: '空页面'
+      }]
+    },
     ]
   },
   jump: (event) => {
@@ -54,4 +53,4 @@ Page({
       });
     }
   }
-})
+});
