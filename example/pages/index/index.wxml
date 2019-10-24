@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="logo">
+    <image class="logo-img" mode="widthFix" src="../../static/img/logo.png" />
+    <view class="desc">
+      <text class="desc-row">北京顺丰同城科技有限公司的FE与UX部门</text>
+      <text class="desc-row">联手打造的小程序基础控件库</text>
+    </view>
+  </view>
+
+  <view wx:for="{{list}}" wx:key="{{index}}" class="block">
+    <view class="title">{{item.title}}</view>
+    <view class="components">
+      <view bindtap="jump" data-page="{{item.components[i]}}" wx:for="{{item.components}}" wx:for-item="c" wx:for-index="i" wx:key="{{i}}" class="components-row">
+        <image mode="widthFix" src="../../static/img/{{c.icon}}" class="components-row-icon" />
+        <text class="components-row-name">{{c.name}}</text>
+        <image mode="widthFix" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzBweCIgaGVpZ2h0PSIzMHB4IiB2aWV3Qm94PSIwIDAgMzAgMzAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5hcnJvd19lbnRlckAyeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSLnu4Tku7YiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJhcnJvdy9lbnRlciIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDYuMDAwMDAwKSIgZmlsbD0iI0JCQkJCQiI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNy43MjIxMTE2MSw5IEwxLjAxMjI0MzA5LDE0Ljg3MTEzNSBDMC4zODg3ODgxNDEsMTUuNDE2NjU4IDAuMzI1NjExODc5LDE2LjM2NDMwMiAwLjg3MTEzNDk1OCwxNi45ODc3NTY5IEMxLjQxNjY1ODA0LDE3LjYxMTIxMTkgMi4zNjQzMDE5NiwxNy42NzQzODgxIDIuOTg3NzU2OTEsMTcuMTI4ODY1IEwxMC4xMjc2NjkzLDEwLjg4MTQ0MTcgQzEwLjIxMTE5NjIsMTAuODA4MzU1NyAxMC4yODk3NjM0LDEwLjcyOTc4ODQgMTAuMzYyODQ5NSwxMC42NDYyNjE1IEMxMS4yNzIwNTQ2LDkuNjA3MTY5OTQgMTEuMTY2NzYwOCw4LjAyNzc2MzM5IDEwLjEyNzY2OTMsNy4xMTg1NTgyNiBMMi45ODc3NTY5MSwwLjg3MTEzNDk1OCBDMi4zNjQzMDE5NiwwLjMyNTYxMTg3OSAxLjQxNjY1ODA0LDAuMzg4Nzg4MTQxIDAuODcxMTM0OTU4LDEuMDEyMjQzMDkgQzAuMzI1NjExODc5LDEuNjM1Njk4MDQgMC4zODg3ODgxNDEsMi41ODMzNDE5NiAxLjAxMjI0MzA5LDMuMTI4ODY1MDQgTDcuNzIyMTExNjEsOSBaIiBpZD0iUGF0aC0yIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHJlY3QgaWQ9ImFycm93X2VudGVyIiB4PSIwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiPjwvcmVjdD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" class="components-row-right" />
+      </view>
+    </view>
+  </view>
+</view>

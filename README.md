@@ -1,262 +1,127 @@
-# WeXD 小程序组件库
+<p align="center">
+  <img alt="logo" src="https://img.yzcdn.cn/vant/logo.png" width="120" style="margin-bottom: 10px;">
+</p>
+<h3 align="center">SF 小程序 UI 组件库</h3>
 
-> WeXD 
+<p align="center">
+  <img src="https://img.shields.io/npm/v/vant-weapp.svg?style=flat-square" alt="npm version" />
+  <img src="https://img.shields.io/npm/dt/vant-weapp.svg?style=flat-square" alt="downloads" />
+  <img src="https://img.shields.io/npm/dm/vant-weapp.svg?style=flat-square" alt="downloads" />
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg">
+</p>
 
-## ✨ 项目简介
+<p align="center">
+  🔥 <a href="https://youzan.github.io/vant-weapp">文档网站</a>
+  &nbsp;
+  🚀 <a href="https://github.com/youzan/vant" target="_blank">Vue 版</a>
+</p>
 
-本项目为 小程序 项目，使用 [xxx](https://github.com/facebook/create-react-app) 搭建, 在CRA2的基础上定制化了webpack配置，并对ejcet后的config进行了深度优化,同时使用了[sf-common](http://gitlab.sftcwl.com/fe/sf-common)作为子模块。
+---
 
-使用到的技术栈为：
+## 介绍
 
-* [React](https://reactjs.org/)
-* [Ant Design Mobile](https://mobile.ant.design/docs/react/introduce-cn)
-* [Mobx](https://cn.mobx.js.org/)
-* [React Router 4](https://github.com/ReactTraining/react-router)
-* [Sass](https://github.com/webpack-contrib/sass-loader)
-* [CSS Modules](https://github.com/css-modules/css-modules)
-* [webpack](https://webpack.docschina.org/concepts/)
-* [jest](http://jestjs.io/docs/zh-Hans/getting-started)
-* [nodejs](https://nodejs.org/)
+WXD 是 SF 小程序 UI 组件库，助力开发者快速搭建小程序应用。
 
-## 🔨 开发构建
+## 预览
 
-clone项目并安装依赖
+扫描下方小程序二维码，体验组件库示例：
 
-```bash
-`git clone --recursive http://gitlab.sftcwl.com/fe/e-nation-op.git`
-`npm install` or `yarn`
-```
+<img src="https://img.yzcdn.cn/vant-weapp/qrcode-201808101114.jpg" width="200" height="200" style="margin-top: 10px;" >
 
-开发模式，运行项目
+## 使用之前
 
-```bash
-`npm start` or `yarn start`
-```
+使用 Vant Weapp 前，请确保你已经学习过微信官方的 [小程序简易教程](https://mp.weixin.qq.com/debug/wxadoc/dev/) 和 [自定义组件介绍](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/)。
 
-如果clone下来发现lib缺少文件，执行如下命令
+## 安装
 
-```bash
-`cd e-nation-op`
-`npm run lib:init` or `yarn lib:init`
-```
+### 方式一. 通过 npm 安装 (推荐)
 
-子模块有更新时，拉取子模块文件
+小程序已经支持使用 npm 安装第三方包，详见 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html?search-key=npm)
 
 ```bash
-`npm run lib:pull` or `yarn lib:pull`
+# npm
+npm i vant-weapp -S --production
+
+# yarn
+yarn add vant-weapp --production
 ```
 
-生产模式，构建项目
+### 方式二. 下载代码
 
+直接通过 git 下载 Vant Weapp 源代码，并将`dist`目录拷贝到自己的项目中
 ```bash
-`npm run build` or `yarn build`
+git clone https://github.com/youzan/vant-weapp.git
 ```
 
-## ⌨️ Git 脚本
+## 使用组件
 
-说明：每个人新建自己的分支
+以按钮组件为例，只需要在 json 文件中引入按钮对应的自定义组件即可
 
-`git clone -b dev http://gitlab.sftcwl.com/fe/xxx.git`
-
-`git checkout -b ${yourname}`
-
-`git push --set-upstream origin ${yourname}`
-
-默认将更新合并到 dev 分支，其他人从 dev 分支拉取更新。
-
-使用：将下面的代码保存为 `git.sh` 文件，将变量 `ME` 的值改为自己的分支名，每次在自己的分支下提交 commit 后，`sh git.sh` 运行脚本，即可实现与 dev 分支的自动更新合并同步。（如有冲突，自行解决冲突后，再次运行脚本即可。）
-
-
-### 备注：
-
-1.如需同步 master 分支，将 `MAIN` 变量的值改为 `master` 并运行脚本即可。
-
-2.如果不能运行.sh文件，请在当前目录运行 `chmod +x *`
-
-3.从远程分支拉取到自己的分支`git pull origin dev:${yourname}`
-
-4.服务端渲染功能现在仅支持渲染打包后的文件首页，其中服务端路由和普通路由之间还没有实现同构，需要进一步探索。
-
-
-```bash
-#!/bin/sh
-
-if [ $? -ne 0 ]; then
-exit 1
-fi
-
-# 当前开发分支
-MAIN="dev"
-# 将变量 ME 的值改为自己的分支名
-ME="branch_name"
-
-git push
-git pull
-git merge origin/${MAIN}
-git push
-
-git checkout ${MAIN}
-git pull
-git merge ${ME}
-git push
-
-git checkout ${ME}
-```
-
-## 📦 打包并推送
-
-推送指令 `sh push.sh {要推送的人名} {是否是hot模式}`
-
-热推送(建议推给研发联调时使用) `sh push.sh {name} -hot`
-
-推送压缩包(建议推给测试提测时使用) `sh push.sh {name}`
-
-在你的项目config/push.config.js中进行推送配置
-
-```javascript
-名字: {
-    receiver: 'http://10.xxx.xx.xxx:8888/receiver.php',
-    root: '/xxx/xxx/项目部署根目录/',
+```json
+{
+  "usingComponents": {
+    "van-button": "/path/to/vant-weapp/dist/button/index"
+  }
 }
 ```
 
-## 🔖 目录结构
+接着就可以在 wxml 中直接使用组件
 
-```
-├── README.md
-├── build  --项目编译后的目录
-├── config --webpack等配置文件目录
-├── package-lock.json
-├── package.json
-├── public   --html模板目录
-├── scripts  --npm脚本目录
-├── lib --公共子模块
-├── src
-├── ├── setupProxy.js  --代理配置（原package.json中的proxy配置）
-│   ├── index.scss  --公共样式文件
-│   ├── App.js  --主业务入口
-│   ├── components  --公共组件文件夹
-│   ├── index.js  --SPA生成入口文件
-│   ├── pages --页面文件夹
-│   │   ├── Page1.jsx  --页面文件
-│   │   ├── Page1.scss --页面文件样式表
-│   ├── assets  --图片图标等资源文件目录
-│   ├── stores  --项目自有公用store文件
-│   │   ├── BaseStore.js
-│   │   └── index.js
-│   ├── themes --主题文件夹
-│   │   ├── antd.less --ant design主题文件包
-│   └── utils  --项目自有工具类
-├── yarn-error.log
-└── yarn.lock
-└── push.sh --推送脚本
-
+```html
+<van-button type="primary">按钮</van-button>
 ```
 
-## 📝 命名规范
+## 在开发者工具中预览
 
-组件以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名，文件夹中的组件与其 `.scss` 样式文件名称一致，同样以 PascalCase 命名，放置在文件夹第一层。
+```bash
+# 安装项目依赖
+npm install
 
-页面自有的组件文件夹命名为 `components`（复数，小写），`pages`（复数，小写），`store` 文件夹为pages对应的modal文件。
- 
-页面用到的公共资源文件（`assets`）、公共工具函数（`utils`）等，放置在 `src` 下建公共目录。
-
-总之，遵循公共组件放置在公共位置，自有组件自组织的原则。
-
-### 页面文件
-
-**`src/pages`**
-
-Good:
-
-```
-src
-  pages
-    pageA
-      ComponentA.jsx
-      ComponentA.scss
-    pageB
-      ListPage.jsx
-      ListPage.scss
-      ItemPage.jsx
-      ItemPage.scss
+# 执行组件编译
+npm run dev
 ```
 
-Bad:
+打开[微信开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)，把`vant-weapp/example`目录添加进去就可以预览示例了。
 
-```
-src
-  pages
-    PageA
-      listPage // 文件夹字母大写
-        index.jsx //首字母大写
-        index.scss  //首字母大写
-      ItemPage
-        Index.jsx
-        style.scss  //对应为Index.scss
-      ListPage.jsx
-      itemPage.jsx // 应使用 PascalCase
-```
+## 基础库版本
 
-### 公共组件
+Vant Weapp 最低支持到小程序基础库 1.9.9 版本
 
-**`src/components`**
+## 微信讨论群
 
-本文件夹存放多个页面用到的公共组件，相关公共组件建议存放在一个单独文件夹，与pages文件夹规范一致，组件名称须与其 `.scss` 样式文件名称一致，如需 `store` 可以引入对应文件，以 [PascalCase](https://baike.baidu.com/item/PascalCase) 命名
+欢迎大家在微信上联系我们，添加下方微信并注明『交流 vant-weapp』即可
 
-Good:
+<img src="https://img.yzcdn.cn/vant/wechat_20180606.png" width="220" height="292" >
 
-```
-src
-  componenents
-    Common
-     ComponenetA.jsx
-     ComponenetA.scss
-     store.js
-    ModalFirst
-     ModalFirstB.jsx
-     ModalFirstB.scss
-     store.js
-```
+## 加入我们
 
-Bad:
+**有赞前端团队**是由一群年轻、皮实、对技术饱含热情的小伙伴组成的，目前共有 100 多名前端工程师，分布在业务中台、电商、零售、美业、资产、赋能等业务线。
 
-```
-src
-  componenents
-    ComponenetA.jsx // 不应该全部都堆在根目录
-    ComponenetA.scss
-    ComponenetAStore.js
-    ComponenetB.jsx
-    ComponenetB.scss
-    ComponenetBStore.js
-    
-    common // 文件夹首字母大写
-     ComponenetD.jsx
-     componenetd.scss // 应使用 PascalCase
-```
+我们热爱分享和开源，崇尚用工程师的方式解决问题，因此造了很多工具来解决我们遇到的问题，目前我们维护的开源产品有：
 
-### 工具函数
+<img src="https://img.yzcdn.cn/public_files/2019/07/22/f4b70763c55c8710c52c667ecf192c05.jpeg" width="320" height="303">
 
-**`src/utils`**
+我们正在寻找更多优秀的小伙伴，一起拓展前端技术的边界，期待你的加入！
 
-本文件夹存放该项目的公用工具函数，建议是[纯函数](https://zh.wikipedia.org/wiki/%E7%BA%AF%E5%87%BD%E6%95%B0)，函数文件以 [camelCase](https://baike.baidu.com/item/camelCase) 命名。
+- <a target="_blank" href="https://app.mokahr.com/apply/youzan/6252#/job/96f5d2c7-e657-4d31-9244-195edc443a7f?_k=jf2141">职位详情</a>（Base: 杭州/深圳）
+- <a target="_blank" href="https://tech.youzan.com/tag/front-end/">团队博客</a>
+- <a target="_blank" href="https://github.com/youzan">开源项目</a>
 
-Good:
+## 链接
 
-```
-src
-  utils
-    fnA.js
-    fnB.js
-```
+* [更新日志](https://github.com/youzan/vant-weapp/blob/dev/docs/markdown/changelog.md)
+* [意见反馈](https://github.com/youzan/vant-weapp/issues)
+* [加入我们](https://job.youzan.com)
+* [Vant: 移动端 Vue UI](https://github.com/youzan/vant)
 
-Bad:
+## 开源协议
 
-```
-src
-  utils
-    FnA.js // 应使用 camelCase
-    helloword.js // 应使用 camelCase
-    fnB.jsx // 应使用 `.js` 文件
-```
+本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89)协议，请自由地享受和参与开源。
+
+[vant-weapp]: https://github.com/youzan/vant-weapp
+[issue]: https://github.com/youzan/vant-weapp/issues/new
+[PR]: https://github.com/youzan/vant-weapp/compare
+[MIT]: http://opensource.org/licenses/MIT
+[小程序简易教程]: https://mp.weixin.qq.com/debug/wxadoc/dev/
+[小程序框架介绍]: https://mp.weixin.qq.com/debug/wxadoc/dev/framework/MINA.html
+[微信开发者工具]: https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html
