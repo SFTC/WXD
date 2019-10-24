@@ -23,8 +23,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "vant commit-lint"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
@@ -37,7 +36,7 @@
       "git add"
     ]
   },
-  "homepage": "https://github.com/youzan/vant-weapp#readme",
+  "homepage": "https://github.com/SFTC/WXD#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
