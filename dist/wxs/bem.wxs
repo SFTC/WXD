@@ -1,6 +1,6 @@
 var array = require('./array.wxs');
 var object = require('./object.wxs');
-var PREFIX = 'van-';
+var PREFIX = 'wxd-';
 
 function join(name, mods) {
   name = PREFIX + name;

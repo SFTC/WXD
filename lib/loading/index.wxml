@@ -1,23 +1,23 @@
-<view class="van-loading {{vertical ? 'van-loading--vertical' : ''}}">
+<view class="wxd-loading {{vertical ? 'wxd-loading--vertical' : ''}}">
   <view
-    class="van-loading__wrapper custom-class"
+    class="wxd-loading__wrapper custom-class"
     style="width: {{ sizeWithUnit }}; height: {{ sizeWithUnit }}"
   >
     <view
-      class="van-loading__spinner van-loading__spinner--{{ type }}"
+      class="wxd-loading__spinner wxd-loading__spinner--{{ type }}"
       style="color: {{ color }};"
     >
       <view
         wx:if="{{ type === 'spinner' }}"
         wx:for="item in 12"
         wx:key="index"
-        class="van-loading__dot"
+        class="wxd-loading__dot"
       />
     </view>
   </view>
   <view 
     style="font-size: {{textSizeWithUnit}};" 
-    class="van-loading__text {{vertical ? 'van-loading__text--vertical' : ''}}"
+    class="wxd-loading__text {{vertical ? 'wxd-loading__text--vertical' : ''}}"
   >
     <slot />
   </view>

@@ -95,7 +95,7 @@
     "van-submit-bar": "./dist/submit-bar/index",
     "van-swipe-cell": "./dist/swipe-cell/index",
     "van-uploader": "./dist/uploader/index",
-    "van-switch": "./dist/switch/index",
+    "wxd-switch": "./dist/switch/index",
     "van-tab": "./dist/tab/index",
     "van-tabs": "./dist/tabs/index",
     "van-tabbar": "./dist/tabbar/index",
