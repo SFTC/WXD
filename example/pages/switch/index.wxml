@@ -1,49 +1,90 @@
-<demo-block title="基础用法" padding>
-  <wxd-switch
-    checked="{{ checked }}"
-    bind:change="onChange"
-  />
+<demo-block title="list高度40，合并使用" padding>
+  <view class="switch-list">
+    <view class="switch-list-item" wx:for="{{ list }}">
+      <view>开关</view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="20px"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
 </demo-block>
 
-<demo-block title="禁用状态" padding>
-  <wxd-switch
-    checked="{{ checked }}"
-    disabled
-    bind:change="onChange"
-  />
+<demo-block title="list高度40，拆分使用" padding>
+  <view class="switch-list2">
+    <view class="switch-list-item2" wx:for="{{ list }}">
+      <view>开关</view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="20px"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
 </demo-block>
 
-<demo-block title="加载状态" padding>
-  <wxd-switch
-    checked="{{ checked }}"
-    loading
-    bind:change="onChange"
-  />
+<demo-block title="list高度60，混合使用" padding>
+  <view class="switch-list switch-list3">
+    <view class="switch-list-item switch-list-item3" wx:for="{{ list }}">
+      <view>开关</view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="20px"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+  <view class="switch-list-item4">
+    <view>开关</view>
+    <wxd-switch
+      checked="{{ checked }}"
+      size="20px"
+      active-color="#4388FF"
+      inactive-color="#ccc"
+      bind:change="onChange2"
+    />
+  </view>
 </demo-block>
 
-<demo-block title="自定义大小" padding>
-  <wxd-switch
-    checked="{{ checked }}"
-    size="24px"
-    bind:change="onChange"
-  />
+<demo-block title="list高度70，混合使用" padding>
+  <view class="switch-list5">
+    <view class="switch-list-item switch-list-item5" wx:for="{{ list }}">
+      <view>
+        <view>签收码开关</view>
+        <view class="notice">骑士送达时，提供签收码，确保安全签收</view>
+      </view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="20px"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+  <view class="switch-list-item4">
+    <view>签收码开关</view>
+    <wxd-switch
+      checked="{{ checked }}"
+      size="20px"
+      active-color="#4388FF"
+      inactive-color="#ccc"
+      bind:change="onChange2"
+    />
+  </view>
 </demo-block>
-
-<demo-block title="自定义颜色" padding>
-  <wxd-switch
-    checked="{{ checked }}"
-    active-color="#07c160"
-    inactive-color="#ee0a24"
-    bind:change="onChange"
-  />
-</demo-block>
-
-<demo-block title="异步控制" padding>
-  <wxd-switch
-    checked="{{ checked2 }}"
-    size="36px"
-    bind:change="onChange2"
-  />
-</demo-block>
-
-<van-dialog id="van-dialog" />

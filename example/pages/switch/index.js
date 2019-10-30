@@ -1,22 +1,28 @@
 import Page from '../../common/page';
-import Dialog from '../../dist/dialog/dialog';
 
 Page({
   data: {
-    checked: true,
-    checked2: true
+    list: [
+      {
+        checked: true
+      },
+      {
+        checked: false
+      },
+      {
+        checked: false
+      }
+    ],
+    checked: true
   },
 
-  onChange({ detail }) {
-    this.setData({ checked: detail });
+  onChange(e) {
+    const { checked, index } = e.currentTarget.dataset;
+    this.data.list[index].checked = !checked;
+    this.setData({ list: this.data.list });
   },
 
   onChange2({ detail }) {
-    Dialog.confirm({
-      title: '提示',
-      message: '是否切换开关？'
-    }).then((res) => {
-      this.setData({ checked2: detail });
-    });
+    this.setData({ checked: detail });
   }
 });
