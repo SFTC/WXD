@@ -12,7 +12,7 @@ Page({
       {
         icon: 'icon_icon@2x.png',
         name: '图标',
-        path: 'button',
+        path: 'icon',
       }
       ]
     },
