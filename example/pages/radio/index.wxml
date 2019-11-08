@@ -33,33 +33,3 @@
     单选框
   </van-radio>
 </demo-block>
-
-<demo-block title="自定义图标" padding>
-  <van-radio use-icon-slot value="1" name="1">
-    自定义图标
-    <image
-      slot="icon"
-      src="{{ radio3 === '1' ? icon.active : icon.normal }}"
-      class="icon"
-      mode="widthFix"
-    />
-  </van-radio>
-</demo-block>
-
-<demo-block title="与 Cell 组件一起使用">
-  <van-radio-group value="{{ radio3 }}">
-    <van-cell-group>
-      <van-cell
-        wx:for="{{ list }}"
-        wx:key="index"
-        title="单选框 {{ item }}"
-        value-class="value-class"
-        clickable
-        data-name="{{ item }}"
-        bind:click="onClick"
-      >
-        <van-radio name="{{ item }}" />
-      </van-cell>
-    </van-cell-group>
-  </van-radio-group>
-</demo-block>
