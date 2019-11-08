@@ -13,7 +13,7 @@ VantComponent({
     customStyle: String,
     classPrefix: {
       type: String,
-      value: 'van-icon'
+      value: 'wxd-icon'
     },
     name: {
       type: String,

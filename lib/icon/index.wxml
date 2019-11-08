@@ -1,5 +1,5 @@
 <view
-  class="custom-class {{ classPrefix }} {{ isImageName ? 'van-icon--image' : classPrefix + '-' + name }}"
+  class="custom-class {{ classPrefix }} {{ isImageName ? 'wxd-icon--image' : classPrefix + '-' + name }}"
   style="{{ color ? 'color: ' + color + ';' : '' }}{{ size ? 'font-size: ' + sizeWithUnit + ';' : '' }}{{ customStyle }}"
   bind:tap="onClick"
 >
@@ -7,12 +7,12 @@
     wx:if="{{ info !== null || dot }}"
     dot="{{ dot }}"
     info="{{ info }}"
-    custom-class="van-icon__info"
+    custom-class="wxd-icon__info"
   />
   <image
     wx:if="{{ isImageName }}"
     src="{{ name }}"
     mode="aspectFit"
-    class="van-icon__image"
+    class="wxd-icon__image"
   />
 </view>

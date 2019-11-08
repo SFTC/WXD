@@ -1,10 +1,10 @@
-<wxd-tabs
+<van-tabs
   active="{{ active }}"
   color="#1989fa"
   bind:change="onSwitch"
 >
-  <wxd-tab title="基础图标" name="0" custom-class="demo-tab-pane">
-    <wxd-col
+  <van-tab title="基础图标" name="0" custom-class="demo-tab-pane">
+    <van-col
       wx:for="{{ iconConfigs.basic }}"
       wx:key="index"
       custom-class="col"
@@ -16,25 +16,10 @@
         custom-class="icon"
       />
       <view class="text">{{ item }}</view>
-    </wxd-col>
-  </wxd-tab>
-  <wxd-tab title="线框风格" name="1"  custom-class="demo-tab-pane">
-    <wxd-col
-      wx:for="{{ iconConfigs.outline }}"
-      wx:key="index"
-      custom-class="col"
-      span="6"
-    >
-      <wxd-icon
-        name="{{ item }}"
-        size="32px"
-        custom-class="icon"
-      />
-      <view class="text">{{ item }}</view>
-    </wxd-col>
-  </wxd-tab>
-  <wxd-tab title="实底风格" name="2"  custom-class="demo-tab-pane">
-    <wxd-col
+    </van-col>
+  </van-tab>
+  <van-tab title="实底风格" name="2"  custom-class="demo-tab-pane">
+    <van-col
       wx:for="{{ iconConfigs.filled }}"
       wx:key="index"
       custom-class="col"
@@ -46,6 +31,6 @@
         custom-class="icon"
       />
       <view class="text">{{ item }}</view>
-    </wxd-col>
-  </wxd-tab>
-</wxd-tabs>
+    </van-col>
+  </van-tab>
+</van-tabs>

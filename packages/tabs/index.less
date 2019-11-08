@@ -4,7 +4,7 @@
 @tabs-line-height: 44px;
 @tabs-card-height: 30px;
 
-.van-tabs {
+.wxd-tabs {
   position: relative;
   -webkit-tap-highlight-color: transparent;
 
@@ -26,7 +26,7 @@
     }
 
     &--scrollable {
-      .van-tab {
+      .wxd-tab {
         flex: 0 0 22%;
       }
     }
@@ -49,7 +49,7 @@
     &--card {
       .theme(height, '@tabs-card-height');
 
-      .van-tab {
+      .wxd-tab {
         .theme(color, '@red');
         .theme(line-height, '@tabs-card-height');
         .theme(border-right, '1px solid @red');
@@ -58,7 +58,7 @@
           border-right: none;
         }
 
-        &.van-tab--active {
+        &.wxd-tab--active {
           .theme(color, '@white');
           .theme(background-color, '@red');
         }
@@ -79,7 +79,7 @@
   &--line {
     .theme(padding-top, '@tabs-line-height');
 
-    .van-tabs__wrap {
+    .wxd-tabs__wrap {
       .theme(height, '@tabs-line-height');
     }
   }
@@ -88,7 +88,7 @@
     margin: 0 15px;
     .theme(padding-top, '@tabs-card-height');
 
-    .van-tabs__wrap {
+    .wxd-tabs__wrap {
       .theme(height, '@tabs-card-height');
     }
   }
@@ -102,7 +102,7 @@
   }
 }
 
-.van-tab {
+.wxd-tab {
   position: relative;
   flex: 1;
   box-sizing: border-box;

@@ -9,9 +9,7 @@ const iconConfigs = {
     'choose',
     'close-o',
     'arrowright',
-    'down'
-  ],
-  outline: [
+    'down',
     'close',
     'scan',
     'camera',
@@ -20,6 +18,7 @@ const iconConfigs = {
     'order',
     'home',
     'search',
+    'arrowdown',
   ],
   filled: [
     'avatar',
@@ -31,7 +30,6 @@ const iconConfigs = {
     'choosed',
     'inputclear',
     'question',
-    'arrowdown',
     'searchbox',
   ],
 };
@@ -39,12 +37,12 @@ const iconConfigs = {
 Page({
   data: {
     iconConfigs,
-    active: 0
+    active: '0'
   },
 
   onSwitch(event) {
     this.setData({
-      active: event.detail.index,
+      active: event.detail.name,
     });
   }
 });
