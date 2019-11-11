@@ -1,13 +1,21 @@
 .demo-checkbox-group {
-  margin: 10px 0 0 20px;
+  padding: 0 17px;
 }
 
 .demo-checkbox {
-  margin: 10px 0 0 20px;
+  margin-bottom: 20rpx;
+  width: 690rpx;
+  height: 120rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
-.value-class {
-  flex: none !important;
+.demo-checkbox-behind {
+  justify-content: space-between;
 }
 
 .icon {

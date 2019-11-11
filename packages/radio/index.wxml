@@ -1,6 +1,6 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
 
-<view class="wxd-radio custom-class">
+<view class="wxd-radio custom-class" capture-catch:tap="onChange">
   <view
     wx:if="{{ labelPosition === 'left' }}"
     class="label-class {{ utils.bem('radio__label', [labelPosition, { disabled }]) }}"
@@ -15,7 +15,7 @@
       name="choosed"
       size="24px"
       custom-class="icon"
-      color="{{checkedColor}}"
+      color="{{disabled ? '' : checkedColor}}"
       class="{{ utils.bem('radio__icon', [shape, { disabled, checked: value }]) }}"
     />
     <wxd-icon
@@ -23,7 +23,7 @@
       name="choose"
       size="24px"
       custom-class="icon"
-      color="{{checkedColor}}"
+      color="#ccc"
       class="{{ utils.bem('radio__icon', [shape, { disabled, checked: value }]) }}"
     />
   </view>

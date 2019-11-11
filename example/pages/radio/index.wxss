@@ -3,13 +3,27 @@
 }
 
 .demo-radio {
-  margin-bottom: 10px;
+  margin-bottom: 20rpx;
+  width: 690rpx;
+  height: 120rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
 }
 
-.value-class {
-  flex: none !important;
+.demo-radio.active {
+  border: 1rpx solid #4833ff;
 }
 
 .icon {
   width: 20px;
 }
+
+
+.demo-radio-behind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

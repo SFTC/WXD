@@ -57,7 +57,10 @@ VantComponent({
 
     onChange(event: Weapp.Event) {
       console.log(event);
-      this.emitChange(this.data.name);
+      const { disabled, name } = this.data;
+      if (!disabled) {
+        this.emitChange(name);
+      }
     },
 
     onClickLabel() {
