@@ -7,6 +7,11 @@
       <text class="desc-row">联手打造的小程序基础控件库</text>
     </view>
   </view>
+  <wxd-icon
+  name="newchoosed"
+  size="32px"
+  custom-class="icon"
+  />
   <view wx:for="{{list}}" wx:key="{{index}}" class="block">
     <view class="title">{{item.title}}</view>
     <view class="components">
