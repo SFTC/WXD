@@ -6,8 +6,8 @@
 
 ```json
 "usingComponents": {
-  "van-radio": "path/to/vant-weapp/dist/radio/index",
-  "van-radio-group": "path/to/vant-weapp/dist/radio-group/index"
+  "wxd-radio": "./dist/radio/index",
+  "wxd-radio-group": "./dist/radio-group/index"
 }
 ```
 
@@ -18,10 +18,10 @@
 通过`value`绑定值当前选中项的 name
 
 ```html
-<van-radio-group value="{{ radio }}" bind:change="onChange">
-  <van-radio name="1">单选框 1</van-radio>
-  <van-radio name="2">单选框 2</van-radio>
-</van-radio-group>
+<wxd-radio-group value="{{ radio }}" bind:change="onChange">
+  <wxd-radio name="1">单选框 1</wxd-radio>
+  <wxd-radio name="2">单选框 2</wxd-radio>
+</wxd-radio-group>
 ```
 
 ```js
@@ -40,19 +40,19 @@ Page({
 
 ### 禁用状态
 
-通过`disabled`属性禁止选项切换，在`van-radio`上设置`diabled`可以禁用单个选项
+通过`disabled`属性禁止选项切换，在`wxd-radio`上设置`diabled`可以禁用单个选项
 
 ```html
-<van-radio-group value="{{ radio }}" bind:change="onChange" disabled>
-  <van-radio name="1">单选框 1</van-radio>
-  <van-radio name="2">单选框 2</van-radio>
-</van-radio-group>
+<wxd-radio-group value="{{ radio }}" bind:change="onChange" disabled>
+  <wxd-radio name="1">单选框 1</wxd-radio>
+  <wxd-radio name="2">单选框 2</wxd-radio>
+</wxd-radio-group>
 ```
 
 ### 自定义颜色
 
  ```html
-<van-radio checked-color="#07c160">复选框</van-radio>
+<wxd-radio checked-color="#07c160">复选框</wxd-radio>
 ```
 
 ### 自定义图标
@@ -60,13 +60,13 @@ Page({
 通过 icon 插槽自定义图标
 
 ```html
-<van-radio use-icon-slot value="{{ radio }}" name="1" bind:change="onChange">
+<wxd-radio use-icon-slot value="{{ radio }}" name="1" bind:change="onChange">
   自定义图标
   <image
     slot="icon"
     src="{{ radio === '1' ? icon.active : icon.normal }}"
   />
-</van-radio>
+</wxd-radio>
 ```
 
 ```js
@@ -85,62 +85,6 @@ Page({
     });
   }
 });
-```
-
-### 与 Cell 组件一起使用
-
-此时你需要再引入`Cell`和`CellGroup`组件。
-
-```html
-<van-radio-group value="{{ radio }}" bind:change="onChange">
-  <van-cell-group>
-    <van-cell
-      title="单选框 1"
-      value-class="value-class"
-      clickable
-      data-name="1"
-      bind:click="onClick"
-    >
-      <van-radio name="1" />
-    </van-cell>
-    <van-cell
-      title="单选框 2"
-      value-class="value-class"
-      clickable
-      data-name="2"
-      bind:click="onClick"
-    >
-      <van-radio name="2" />
-    </van-cell>
-  </van-cell-group>
-</van-radio-group>
-```
-
-```js
-Page({
-  data: {
-    radio: '1'
-  },
-
-  onChange(event) {
-    this.setData({
-      radio: event.detail
-    });
-  },
-
-  onClick(event) {
-    const { name } = event.currentTarget.dataset;
-    this.setData({
-      radio: name
-    });
-  }
-});
-```
-
-```css
-.value-class {
-  flex: none !important;
-}
 ```
 
 ## API

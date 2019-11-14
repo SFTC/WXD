@@ -11,7 +11,7 @@
   <view class="wxd-radio__icon-wrap" style="font-size: {{ iconSizeWithUnit }};" bindtap="onChange">
     <slot wx:if="{{ useIconSlot }}" name="icon" />
     <wxd-icon
-      wx:if="{{value === name}}"
+      wx:if="{{!useIconSlot && value === name}}"
       name="choosed"
       size="24px"
       custom-class="icon"
@@ -19,7 +19,7 @@
       class="{{ utils.bem('radio__icon', [shape, { disabled, checked: value }]) }}"
     />
     <wxd-icon
-      wx:else
+      wx:if="{{!useIconSlot && value !== name}}"
       name="choose"
       size="24px"
       custom-class="icon"

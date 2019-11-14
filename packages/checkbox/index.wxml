@@ -7,7 +7,7 @@
   <view class="wxd-checkbox__icon-wrap" bindtap="toggle">
     <slot wx:if="{{ useIconSlot }}" name="icon" />
     <wxd-icon
-      wx:if="{{value === true}}"
+      wx:if="{{!useIconSlot && value}}"
       name="choosed"
       size="24px"
       custom-class="icon"
@@ -15,7 +15,7 @@
       class="{{ utils.bem('checkbox__icon', [shape, { disabled, checked: value }]) }}"
     />
     <wxd-icon
-      wx:else
+      wx:if="{{!useIconSlot && !value}}"
       name="choose"
       size="24px"
       custom-class="icon"

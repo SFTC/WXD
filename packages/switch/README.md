@@ -6,7 +6,7 @@
 
 ```json
 "usingComponents": {
-  "van-switch": "path/to/vant-weapp/dist/switch/index"
+  "wxd-switch": "./dist/switch/index",
 }
 ```
 
@@ -15,7 +15,7 @@
 ### 基础用法
 
 ```html
-<van-switch checked="{{ checked }}" bind:change="onChange" />
+<wxd-switch checked="{{ checked }}" bind:change="onChange" />
 ```
 
 ```javascript
@@ -34,25 +34,25 @@ Page({
 ### 禁用状态
 
 ```html
-<van-switch checked="{{ checked }}" disabled />
+<wxd-switch checked="{{ checked }}" disabled />
 ```
 
 ### 加载状态
 
 ```html
-<van-switch checked="{{ checked }}" loading />
+<wxd-switch checked="{{ checked }}" loading />
 ```
 
 ### 自定义大小
 
 ```html
-<van-switch checked="{{ checked }}" size="24px" />
+<wxd-switch checked="{{ checked }}" size="24px" />
 ```
 
 ### 自定义颜色
 
 ```html
-<van-switch
+<wxd-switch
   checked="{{ checked }}"
   active-color="#07c160"
   inactive-color="#ee0a24"
@@ -62,7 +62,7 @@ Page({
 ### 异步控制
 
 ```html
-<van-switch
+<wxd-switch
   checked="{{ checked }}"
   bind:change="onChange"
 />
