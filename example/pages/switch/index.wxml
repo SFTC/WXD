@@ -4,7 +4,7 @@
       <view>开关</view>
       <wxd-switch
         checked="{{ item.checked }}"
-        size="20px"
+        size="40rpx"
         active-color="#4388FF"
         inactive-color="#ccc"
         data-index="{{ index }}"
@@ -21,7 +21,7 @@
       <view>开关</view>
       <wxd-switch
         checked="{{ item.checked }}"
-        size="20px"
+        size="40rpx"
         active-color="#4388FF"
         inactive-color="#ccc"
         data-index="{{ index }}"
@@ -38,7 +38,7 @@
       <view>开关</view>
       <wxd-switch
         checked="{{ item.checked }}"
-        size="20px"
+        size="40rpx"
         active-color="#4388FF"
         inactive-color="#ccc"
         data-index="{{ index }}"
@@ -51,7 +51,7 @@
     <view>开关</view>
     <wxd-switch
       checked="{{ checked }}"
-      size="20px"
+      size="40rpx"
       active-color="#4388FF"
       inactive-color="#ccc"
       bind:change="onChange2"
@@ -68,7 +68,7 @@
       </view>
       <wxd-switch
         checked="{{ item.checked }}"
-        size="20px"
+        size="40rpx"
         active-color="#4388FF"
         inactive-color="#ccc"
         data-index="{{ index }}"
@@ -81,7 +81,7 @@
     <view>签收码开关</view>
     <wxd-switch
       checked="{{ checked }}"
-      size="20px"
+      size="40rpx"
       active-color="#4388FF"
       inactive-color="#ccc"
       bind:change="onChange2"

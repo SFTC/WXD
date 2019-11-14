@@ -48,7 +48,10 @@ VantComponent({
         },
         onChange(event) {
             console.log(event);
-            this.emitChange(this.data.name);
+            const { disabled, name } = this.data;
+            if (!disabled) {
+                this.emitChange(name);
+            }
         },
         onClickLabel() {
             const { disabled, labelDisabled, name } = this.data;

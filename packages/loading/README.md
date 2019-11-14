@@ -6,7 +6,7 @@
 
 ```json
 "usingComponents": {
-  "van-loading": "path/to/vant-weapp/dist/loading/index"
+  "wxd-loading": "./dist/loading/index",
 }
 ```
 
@@ -15,15 +15,15 @@
 ### Circular
 
 ```html
-<van-loading />
-<van-loading color="#fff" />
+<wxd-loading />
+<wxd-loading color="#fff" />
 ```
 
 ### Spinner
 
 ```html
-<van-loading type="spinner" />
-<van-loading type="spinner" color="#fff" />
+<wxd-loading type="spinner" />
+<wxd-loading type="spinner" color="#fff" />
 ```
 
 ## API
