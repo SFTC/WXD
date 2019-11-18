@@ -39,7 +39,8 @@ Page({
       title: '其他',
       components: [{
         icon: 'icon_empty@2x.png',
-        name: '空页面'
+        // name: '空页面'
+        name: '尽请期待'
       }]
     },
     ]
