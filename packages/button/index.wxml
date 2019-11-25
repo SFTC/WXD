@@ -34,7 +34,7 @@
       wx:if="{{ loadingText }}"
       class="van-button__loading-text"
     >
-      {{ loadingText }}
+      {{ loadingText }}122222
     </view>
   </block>
   <block wx:else>
