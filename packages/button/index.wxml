@@ -23,7 +23,10 @@
   bindlaunchapp="bindLaunchApp"
   bindopensetting="bindOpenSetting"
 >
-  <block wx:if="{{ loading }}">
+  <view class="van-button__text">
+    <slot />
+  </view>
+  <!-- <block wx:if="{{ loading }}">
     <van-loading
       custom-class="loading-class"
       size="{{ loadingSize }}"
@@ -34,7 +37,7 @@
       wx:if="{{ loadingText }}"
       class="van-button__loading-text"
     >
-      {{ loadingText }}122222
+      {{ loadingText }}
     </view>
   </block>
   <block wx:else>
@@ -48,5 +51,5 @@
     <view class="van-button__text">
       <slot />
     </view>
-  </block>
+  </block> -->
 </button>
