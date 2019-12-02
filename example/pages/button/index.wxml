@@ -1,6 +1,12 @@
 <demo-section>
-  <demo-block title="按钮类型" padding>
-    <wxd-button>默认按钮</wxd-button>
+  <demo-block title="面性Btn" padding>
+    <wxd-button type='info' >常规Normal</wxd-button>
+  </demo-block>
+  <demo-block title="面性Btn - 禁用" padding>
+    <wxd-button type='info' disabled >常规Normal</wxd-button>
+  </demo-block>
+  <demo-block title="线性Btn" padding>
+    <wxd-button plain type='info' >常规Normal</wxd-button>
     <!-- <view class="row">
       <van-button class="demo-margin-right">默认按钮</van-button>
       <van-button type="primary" class="demo-margin-right">主要按钮</van-button>
@@ -8,6 +14,15 @@
     </view>
     <van-button type="danger" class="demo-margin-right">危险按钮</van-button>
     <van-button type="warning">警告按钮</van-button> -->
+  </demo-block>
+  <demo-block title="线性Btn - 禁用" padding>
+    <wxd-button plain type='info' disabled >常规Normal</wxd-button>
+  </demo-block>
+  <demo-block title="面性Btn - Loading" padding>
+    <wxd-button type='info' loading >常规Normal</wxd-button>
+  </demo-block>
+  <demo-block title="面性Btn - Icon" padding>
+    <wxd-button type='info' icon='search' >常规Normal</wxd-button>
   </demo-block>
   <!-- <demo-block title="朴素按钮" padding>
     <van-button type="primary" plain class="demo-margin-right">朴素按钮</van-button>

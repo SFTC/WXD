@@ -3,7 +3,7 @@
 <button
   id="{{ id }}"
   class="custom-class {{ utils.bem('button', [type, size, { block, round, plain, square, loading, disabled, hairline, unclickable: disabled || loading }]) }} {{ hairline ? 'van-hairline--surround' : '' }}"
-  hover-class="van-button--active hover-class"
+  hover-class="{{disabled ? '' : 'wxd-button--active hover-class'}}"
   lang="{{ lang }}"
   style="{{ style }} {{ customStyle }}"
   open-type="{{ openType }}"
@@ -15,18 +15,18 @@
   show-message-card="{{ showMessageCard }}"
   app-parameter="{{ appParameter }}"
   aria-label="{{ ariaLabel }}"
-  bindtap="onClick"
-  bindgetuserinfo="bindGetUserInfo"
-  bindcontact="bindContact"
-  bindgetphonenumber="bindGetPhoneNumber"
-  binderror="bindError"
-  bindlaunchapp="bindLaunchApp"
-  bindopensetting="bindOpenSetting"
+  bindtap="{{disabled ? '' : 'onClick'}}"
+  bindgetuserinfo="{{disabled ? '' : 'bindGetUserInfo'}}"
+  bindcontact="{{disabled ? '' : 'bindContact'}}"
+  bindgetphonenumber="{{disabled ? '' : 'bindGetPhoneNumber'}}"
+  binderror="{{disabled ? '' : 'bindError'}}"
+  bindlaunchapp="{{disabled ? '' : 'bindLaunchApp'}}"
+  bindopensetting="{{disabled ? '' : 'bindOpenSetting'}}"
 >
-  <view class="van-button__text">
+  <!-- <view class="wxd-button__text">
     <slot />
-  </view>
-  <!-- <block wx:if="{{ loading }}">
+  </view> -->
+  <block wx:if="{{ loading }}">
     <van-loading
       custom-class="loading-class"
       size="{{ loadingSize }}"
@@ -35,21 +35,21 @@
     />
     <view
       wx:if="{{ loadingText }}"
-      class="van-button__loading-text"
+      class="wxd-button__loading-text"
     >
       {{ loadingText }}
     </view>
   </block>
   <block wx:else>
-    <van-icon
+    <wxd-icon
       wx:if="{{ icon }}"
       size="1.2em"
       name="{{ icon }}"
-      class="van-button__icon"
+      class="wxd-button__icon"
       custom-style="line-height: inherit;"
     />
-    <view class="van-button__text">
+    <view class="wxd-button__text">
       <slot />
     </view>
-  </block> -->
+  </block>
 </button>

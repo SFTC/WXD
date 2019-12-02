@@ -13,7 +13,7 @@ VantComponent({
 
   props: {
     icon: String,
-    plain: Boolean,
+    plain: Boolean, // 是否按钮镂空
     block: Boolean,
     round: Boolean,
     square: Boolean,
@@ -27,7 +27,7 @@ VantComponent({
       value: 'circular'
     },
     type: {
-      type: String,
+      type: String, // 按钮类型
       value: 'default'
     },
     size: {
@@ -68,7 +68,7 @@ VantComponent({
 
   methods: {
     onClick() {
-      if (!this.data.disabled && !this.data.loading) {
+      if (!this.data.loading) {
         this.$emit('click');
       }
     }
