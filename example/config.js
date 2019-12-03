@@ -7,30 +7,30 @@ export default [
         path: '/button',
         title: 'Button 按钮'
       },
-      {
-        path: '/cell',
-        title: 'Cell 单元格'
-      },
+      // {
+      //   path: '/cell',
+      //   title: 'Cell 单元格'
+      // },
       {
         path: '/icon',
         title: 'Icon 图标'
       },
-      {
-        path: '/image',
-        title: 'Image 图片'
-      },
-      {
-        path: '/col',
-        title: 'Layout 布局'
-      },
-      {
-        path: '/popup',
-        title: 'Popup 弹出层'
-      },
-      {
-        path: '/transition',
-        title: 'Transition 动画'
-      }
+      // {
+      //   path: '/image',
+      //   title: 'Image 图片'
+      // },
+      // {
+      //   path: '/col',
+      //   title: 'Layout 布局'
+      // },
+      // {
+      //   path: '/popup',
+      //   title: 'Popup 弹出层'
+      // },
+      // {
+      //   path: '/transition',
+      //   title: 'Transition 动画'
+      // }
     ]
   },
   {
@@ -41,49 +41,49 @@ export default [
         path: '/checkbox',
         title: 'Checkbox 复选框'
       },
-      {
-        path: '/datetime-picker',
-        title: 'DatetimePicker 时间选择'
-      },
-      {
-        path: '/field',
-        title: 'Field 输入框'
-      },
-      {
-        path: '/picker',
-        title: 'Picker 选择器'
-      },
+      // {
+      //   path: '/datetime-picker',
+      //   title: 'DatetimePicker 时间选择'
+      // },
+      // {
+      //   path: '/field',
+      //   title: 'Field 输入框'
+      // },
+      // {
+      //   path: '/picker',
+      //   title: 'Picker 选择器'
+      // },
       {
         path: '/radio',
         title: 'Radio 单选框'
       },
-      {
-        path: '/rate',
-        title: 'Rate 评分'
-      },
-      {
-        path: '/search',
-        title: 'Search 搜索'
-      },
-      {
-        path: '/slider',
-        title: 'Slider 滑块'
-      },
-      {
-        path: '/stepper',
-        title: 'Stepper 步进器'
-      },
+      // {
+      //   path: '/rate',
+      //   title: 'Rate 评分'
+      // },
+      // {
+      //   path: '/search',
+      //   title: 'Search 搜索'
+      // },
+      // {
+      //   path: '/slider',
+      //   title: 'Slider 滑块'
+      // },
+      // {
+      //   path: '/stepper',
+      //   title: 'Stepper 步进器'
+      // },
       {
         path: '/switch',
         title: 'Switch 开关'
       },
-      {
-        path: '/uploader',
-        title: 'Uploader 文件上传'
-      }
+      // {
+      //   path: '/uploader',
+      //   title: 'Uploader 文件上传'
+      // }
     ]
   },
-  {
+  /* {
     groupName: '反馈组件',
     icon: 'passed',
     list: [
@@ -218,5 +218,5 @@ export default [
         title: 'GoodsAction 商品导航'
       }
     ]
-  }
+  } */
 ];
