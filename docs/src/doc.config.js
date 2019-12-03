@@ -10,7 +10,7 @@ export const versions = [version];
 export default {
   header: {
     logo: {
-      image: 'http://www.itbbb.com/img/wxd-logo.png',
+      image: 'http://www.itbbb.com/img/wxd-logo-w.png',
       title: 'WXD',
       href: '#/'
     },

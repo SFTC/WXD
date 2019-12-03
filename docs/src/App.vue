@@ -55,7 +55,7 @@ export default {
   methods: {
     onSwitchVersion(version) {
       if (version !== pkgJson.version) {
-        location.href = `https://youzan.github.io/vant-weapp/${version}`;
+        location.href = `https://github.com/SFTC/WXD/${version}`;
       }
     }
   }
