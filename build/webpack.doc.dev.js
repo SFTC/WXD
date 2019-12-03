@@ -6,8 +6,8 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
   mode: 'development',
   entry: {
-    'vant-docs': './docs/src/index.js',
-    'vant-preview': './docs/src/preview.js'
+    'wxd-docs': './docs/src/index.js',
+    'wxd-preview': './docs/src/preview.js'
   },
   output: {
     path: path.join(__dirname, '../docs/dist'),
@@ -74,13 +74,13 @@ module.exports = {
     new VueLoaderPlugin(),
     new ProgressBarPlugin(),
     new HtmlWebpackPlugin({
-      chunks: ['vant-docs'],
+      chunks: ['wxd-docs'],
       template: 'docs/src/index.tpl',
       filename: 'index.html',
       inject: true
     }),
     new HtmlWebpackPlugin({
-      chunks: ['vant-preview'],
+      chunks: ['wxd-preview'],
       template: 'docs/src/index.tpl',
       filename: 'preview.html',
       inject: true
