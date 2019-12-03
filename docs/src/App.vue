@@ -40,13 +40,13 @@ export default {
       let prefix = '';
       const { path } = this.$route.meta;
 
-      if (location.hostname === '0.0.0.0' || location.hostname === 'localhost') {
-        prefix = 'https://youzan.github.io';
-      }
+      // if (location.hostname === '0.0.0.0' || location.hostname === 'localhost') {
+      //   prefix = 'https://youzan.github.io';
+      // }
 
-      if (!UNSHARED.includes(path)) {
-        return `${prefix}/vant/mobile.html?hide_nav=1&weapp=1#/zh-CN/${path}`;
-      }
+      // if (!UNSHARED.includes(path)) {
+      //   return `${prefix}/vant/mobile.html?hide_nav=1&weapp=1#/zh-CN/${path}`;
+      // }
 
       return `./preview.html#${path}`;
     }
