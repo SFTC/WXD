@@ -6,7 +6,7 @@
 
 ```json
 "usingComponents": {
-  "van-button": "path/to/vant-weapp/dist/button/index"
+  "wxd-button": "./dist/button/index"
 }
 ```
 
@@ -14,32 +14,19 @@
 
 ### 按钮类型
 
-支持`default`、`primary`、`info`、`warning`、`danger`五种类型，默认为`default`
+支持`default`、`info`两种类型，默认为`default`
 
 ```html
-<van-button type="default">默认按钮</van-button>
-<van-button type="primary">主要按钮</van-button>
-<van-button type="info">信息按钮</van-button>
-<van-button type="warning">警告按钮</van-button>
-<van-button type="danger">危险按钮</van-button>
+<wxd-button type="default">默认按钮</wxd-button>
+<wxd-button type="info">信息按钮</wxd-button>
 ```
 
-### 朴素按钮
+### 线性按钮
 
-通过`plain`属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色
-
-```html
-<van-button plain type="primary">朴素按钮</van-button>
-<van-button plain type="info">朴素按钮</van-button>
-```
-
-### 细边框
-
-设置`hairline`属性可以开启 0.5px 边框，基于伪类实现
+通过`plain`属性将按钮设置为线性按钮，线性按钮的文字为按钮颜色，背景为白色
 
 ```html
-<van-button plain hairline type="primary">细边框按钮</van-button>
-<van-button plain hairline type="info">细边框按钮</van-button>
+<wxd-button plain type="info">线性按钮</wxd-button>
 ```
 
 ### 禁用状态
@@ -47,16 +34,13 @@
 通过`disabled`属性来禁用按钮，此时按钮不可点击
 
 ```html
-<van-button disabled type="primary">禁用状态</van-button>
-<van-button disabled type="info">禁用状态</van-button>
+<wxd-button disabled type="info">禁用状态</wxd-button>
 ```
 
 ### 加载状态
 
 ```html
-<van-button loading type="primary" />
-<van-button loading type="primary" loading-type="spinner" />
-<van-button loading type="info" loading-text="加载中..." />
+<wxd-button loading type="info" >加载中...</wxd-button >
 ```
 
 ### 图标按钮
@@ -64,27 +48,7 @@
 通过`icon`属性设置按钮图标，支持 Icon 组件里的所有图标，也可以传入图标 URL
 
 ```html
-<van-button icon="star-o" type="primary" />
-<van-button icon="star-o" type="primary">按钮</van-button>
-<van-button icon="https://img.yzcdn.cn/vant/logo.png" type="info">按钮</van-button>
-```
-
-### 按钮形状
-
-```html
-<van-button square type="primary">方形按钮</van-button>
-<van-button round type="info">圆形按钮</van-button>
-```
-
-### 按钮尺寸
-
-支持`large`、`normal`、`small`、`mini`四种尺寸，默认为`normal`
-
-```html
-<van-button type="primary" size="large">大号按钮</van-button>
-<van-button type="primary" size="normal">普通按钮</van-button>
-<van-button type="primary" size="small">小型按钮</van-button>
-<van-button type="primary" size="mini">迷你按钮</van-button>
+<wxd-button icon="search" type="info" />
 ```
 
 ### 自定义颜色
@@ -92,9 +56,8 @@
 通过`color`属性可以自定义按钮的颜色
 
 ```html
-<van-button color="#7232dd">单色按钮</van-button>
-<van-button color="#7232dd" plain>单色按钮</van-button>
-<van-button color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</van-button>
+<wxd-button color="#7232dd" type="info" >单色按钮</wxd-button>
+<wxd-button color="linear-gradient(to right, #4bb0ff, #6149f6)" type="info" >渐变色按钮</wxd-button>
 ```
 
 ## API
@@ -104,20 +67,12 @@
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 |-----------|-----------|-----------|-------------|-------------|
 | id | 标识符 | *string* | - | - |
-| type | 按钮类型，可选值为 `primary` `info` `warning` `danger` | *string* | `default` | - |
-| size | 按钮尺寸，可选值为 `normal` `large` `small` `mini` | *string* | `normal` | - |
+| type | 按钮类型，可选值为 `info`  | *string* | `default` | - |
 | color | 按钮颜色，支持传入`linear-gradient`渐变色 | *string* | - | 1.0.0 |
 | icon | 左侧图标名称或图片链接，可选值见 [Icon 组件](#/icon) | *string* | - | - |
 | plain | 是否为朴素按钮 | *boolean* | `false` | - |
-| block | 是否为块级元素 | *boolean* | `false` | - |
-| round | 是否为圆形按钮 | *boolean* | `false` | - |
-| square | 是否为方形按钮 | *boolean* | `false` | - |
 | disabled | 是否禁用按钮 | *boolean* | `false` | - |
-| hairline | 是否使用 0.5px 边框 | *boolean* | `false` | - |
 | loading | 是否显示为加载状态 | *boolean* | `false` | - |
-| loading-text | 加载状态提示文字 | *string* | - | - |
-| loading-type | 加载状态图标类型，可选值为 `spinner` | *string* | `circular` | - |
-| loading-size | 加载图标大小 | *string* | `20px` | - |
 | custom-style | 自定义样式 | *string* | - | - |
 | open-type | 微信开放能力，具体支持可参考 [微信官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html) | *string* | - | - |
 | app-parameter | 打开 APP 时，向 APP 传递的参数 | *string* | - | - |
@@ -140,7 +95,7 @@
 | bind:error | 当使用开放能力时，发生错误的回调 | - |
 | bind:opensetting | 在打开授权设置页后回调 | - |
 
-> Button 提供的是 click 事件而不是原生 tap 事件，按钮禁用时，click 事件不会触发，tap 事件依然会触发。
+
 
 ### 外部样式类
 

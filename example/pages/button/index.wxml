@@ -5,6 +5,12 @@
   <demo-block title="面性Btn - 禁用" padding>
     <wxd-button type='info' disabled >常规Normal</wxd-button>
   </demo-block>
+  <demo-block title="面性Btn - 自定义单色" padding>
+    <wxd-button color="#7232dd" type='info' >常规Normal</wxd-button>
+  </demo-block>
+  <demo-block title="面性Btn - 自定义渐变" padding>
+    <wxd-button color="linear-gradient(to right, #4bb0ff, #6149f6)" type='info' >常规Normal</wxd-button>
+  </demo-block>
   <demo-block title="线性Btn" padding>
     <wxd-button plain type='info' >常规Normal</wxd-button>
     <!-- <view class="row">
