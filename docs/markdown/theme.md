@@ -2,7 +2,7 @@
 
 ### 背景知识
 
-由于小程序基于 [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom?hl=zh-cn) 来实现自定义组件，所以 WXD 使用 [Css 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties) 来实现定制主题。链接中的内容可以帮助你对这两个概念有基本的认识，避免许多不必要的困扰。
+ WXD 可以使用 [Css 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties) 来实现定制主题。链接中的内容可以帮助你对这两个概念有基本的认识，避免许多不必要的困扰。
 
 Css变量 的兼容性要求可以在 [这里](https://caniuse.com/#feat=css-variables) 查看。对于不支持 Css变量 的设备，定制主题将不会生效，不过不必担心，默认样式仍会生效。
 
@@ -26,9 +26,9 @@ Css变量 的兼容性要求可以在 [这里](https://caniuse.com/#feat=css-var
 > 在 wxss 中为组件设置 Css 变量
 
 ```html
-<van-button class="my-button">
+<wxd-button class="my-button">
   默认按钮
-</van-button>
+</wxd-button>
 ```
 
 ```less
@@ -41,9 +41,9 @@ Css变量 的兼容性要求可以在 [这里](https://caniuse.com/#feat=css-var
 > 或通过 style 属性来设置 Css 变量，这使你能够轻松实现主题的动态切换
 
 ```html
-<van-button style="{{ buttonStyle }}">
+<wxd-button style="{{ buttonStyle }}">
   默认按钮
-</van-button>
+</wxd-button>
 ```
 
 ```js
@@ -74,11 +74,11 @@ Page({
 
 ```html
 <view class="container">
-  <van-button bind:click="onClick">
+  <wxd-button bind:click="onClick">
     默认按钮
-  </van-button>
+  </wxd-button>
 
-  <van-toast id="van-toast" />
+  <wxd-toast id="wxd-toast" />
 </view>
 ```
 

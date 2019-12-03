@@ -22,12 +22,12 @@ WXD 是 SF 小程序 UI 组件库，助力开发者快速搭建小程序应用�
 
 ### 贡献代码
 
-使用过程中发现任何问题都可以提 [Issue](https://github.com/youzan/vant-weapp/issues) 给我们，当然，我们也非常欢迎你给我们发 [PR](https://github.com/youzan/vant-weapp/pulls)
+使用过程中发现任何问题都可以提 [Issue](https://github.com/SFTC/WXD/issues) 给我们，当然，我们也非常欢迎你给我们发 [PR](https://github.com/youzan/vant-weapp/pulls)
 
 
 ### 链接
 
-* [意见反馈](https://github.com/youzan/vant-weapp/issues)
+* [意见反馈](https://github.com/SFTC/WXD/issues)
 <!-- * [加入我们](https://job.youzan.com) -->
 * [更新日志](#/changelog)
 

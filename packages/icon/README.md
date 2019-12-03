@@ -10,7 +10,7 @@
 
 ```json
 "usingComponents": {
-  "van-icon": "path/to/vant-weapp/dist/icon/index"
+  "wxd-icon": "path/to/wxdt-weapp/dist/icon/index"
 }
 ```
 
@@ -21,8 +21,8 @@
 `Icon`的`name`属性支持传入图标名称或图片链接
 
 ```html
-<van-icon name="close" />
-<van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png" />
+<wxd-icon name="close" />
+<wxd-icon name="https://b.yzcdn.cn/wxdt/icon-demo-1126.png" />
 ```
 
 ### 提示信息
@@ -30,9 +30,9 @@
 设置`dot`属性后，会在图标右上角展示一个小红点。设置`info`属性后，会在图标右上角展示相应的徽标
 
 ```html
-<van-icon name="chat" dot />
-<van-icon name="chat" info="9" />
-<van-icon name="chat" info="99+" />
+<wxd-icon name="chat" dot />
+<wxd-icon name="chat" info="9" />
+<wxd-icon name="chat" info="99+" />
 ```
 
 ## API
@@ -47,7 +47,7 @@
 | color | 图标颜色 | *string* | `inherit` | - |
 | size | 图标大小，如 `20px`，`2em`，默认单位为`px` | *string \| number* | `inherit` | - |
 | custom-style | 自定义样式 | *string* | - | - |
-| class-prefix | 类名前缀 | *string* | `van-icon` | - |
+| class-prefix | 类名前缀 | *string* | `wxd-icon` | - |
 
 ### Events
 
