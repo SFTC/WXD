@@ -2,14 +2,14 @@
 
 ### 介绍
 
-Vant 中默认包含了一些常用样式，可以直接通过 className 的方式使用。
+wxd 中默认包含了一些常用样式，可以直接通过 className 的方式使用。
 
 ### 引入
 
 在 app.wxss 中引入内置样式
 
 ```css
-@import "path/to/vant-weapp/dist/common/index.wxss";
+@import "path/to/wxd-weapp/dist/common/index.wxss";
 ```
 
 ## 代码演示
@@ -19,13 +19,13 @@ Vant 中默认包含了一些常用样式，可以直接通过 className 的方�
 当文本内容长度超过容器最大宽度时，自动省略多余的文本。
 
 ```html
-<view class="van-ellipsis">这是一段宽度限制 250px 的文字，后面的内容会省略</view>
+<view class="wxd-ellipsis">这是一段宽度限制 250px 的文字，后面的内容会省略</view>
 
 <!-- 最多显示两行 -->
-<view class="van-multi-ellipsis--l2">这是一段最多显示两行的文字，后面的内容会省略</view>
+<view class="wxd-multi-ellipsis--l2">这是一段最多显示两行的文字，后面的内容会省略</view>
 
 <!-- 最多显示三行 -->
-<view class="van-multi-ellipsis--l3">这是一段最多显示三行的文字，后面的内容会省略</view>
+<view class="wxd-multi-ellipsis--l3">这是一段最多显示三行的文字，后面的内容会省略</view>
 ```
 
 ### 1px 边框
@@ -34,20 +34,20 @@ Vant 中默认包含了一些常用样式，可以直接通过 className 的方�
 
 ```html
 <!-- 上边框 -->
-<view class="van-hairline--top"></view>
+<view class="wxd-hairline--top"></view>
 
 <!-- 下边框 -->
-<view class="van-hairline--bottom"></view>
+<view class="wxd-hairline--bottom"></view>
 
 <!-- 左边框 -->
-<view class="van-hairline--left"></view>
+<view class="wxd-hairline--left"></view>
 
 <!-- 右边框 -->
-<view class="van-hairline--right"></view>
+<view class="wxd-hairline--right"></view>
 
 <!-- 上下边框 -->
-<view class="van-hairline--top-bottom"></view>
+<view class="wxd-hairline--top-bottom"></view>
 
 <!-- 全边框 -->
-<view class="van-hairline--surround"></view>
+<view class="wxd-hairline--surround"></view>
 ```
