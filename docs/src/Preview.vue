@@ -11,19 +11,14 @@
 </template>
 
 <script>
-const PREFIX = 'https://img.yzcdn.cn/vant-weapp/';
-const MAP = {
-  index: 'index-20190715.png',
-  transition: 'transition-20180821.png'
-};
-
+const PREFIX = 'http://www.itbbb.com/img/';
 export default {
   computed: {
     imageName() {
       return location.hash.slice(1);
     },
     image() {
-      return PREFIX + (MAP[this.imageName] || MAP.index);
+      return PREFIX + 'wxd.png';
     }
   }
 };
@@ -35,7 +30,7 @@ body {
   color: #333;
   font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
   line-height: 1;
-  background-color: #f2f3f5;
+  background-color: #F6F6F6;
   -webkit-font-smoothing: antialiased;
 }
 
