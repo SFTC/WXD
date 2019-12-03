@@ -1,0 +1,18 @@
+<view
+  class="custom-class {{ classPrefix }} {{ isImageName ? 'wxd-icon--image' : classPrefix + '-' + name }}"
+  style="{{ color ? 'color: ' + color + ';' : '' }}{{ size ? 'font-size: ' + sizeWithUnit + ';' : '' }}{{ customStyle }}"
+  bind:tap="onClick"
+>
+  <van-info
+    wx:if="{{ info !== null || dot }}"
+    dot="{{ dot }}"
+    info="{{ info }}"
+    custom-class="wxd-icon__info"
+  />
+  <image
+    wx:if="{{ isImageName }}"
+    src="{{ name }}"
+    mode="aspectFit"
+    class="wxd-icon__image"
+  />
+</view>

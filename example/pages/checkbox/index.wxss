@@ -1,0 +1,23 @@
+.demo-checkbox-group {
+  padding: 0 17px;
+}
+
+.demo-checkbox {
+  margin-bottom: 20rpx;
+  width: 690rpx;
+  height: 120rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.demo-checkbox-behind {
+  justify-content: space-between;
+}
+
+.icon {
+  width: 20px;
+}

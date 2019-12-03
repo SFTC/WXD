@@ -1,0 +1,37 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view class="wxd-radio custom-class" capture-catch:tap="onChange">
+  <view
+    wx:if="{{ labelPosition === 'left' }}"
+    class="label-class {{ utils.bem('radio__label', [labelPosition, { disabled }]) }}"
+    bindtap="onClickLabel"
+  >
+    <slot />
+  </view>
+  <view class="wxd-radio__icon-wrap" style="font-size: {{ iconSizeWithUnit }};" bindtap="onChange">
+    <slot wx:if="{{ useIconSlot }}" name="icon" />
+    <wxd-icon
+      wx:if="{{!useIconSlot && value === name}}"
+      name="choosed"
+      size="24px"
+      custom-class="icon"
+      color="{{disabled ? '' : checkedColor}}"
+      class="{{ utils.bem('radio__icon', [shape, { disabled, checked: value }]) }}"
+    />
+    <wxd-icon
+      wx:if="{{!useIconSlot && value !== name}}"
+      name="choose"
+      size="24px"
+      custom-class="icon"
+      color="#ccc"
+      class="{{ utils.bem('radio__icon', [shape, { disabled, checked: value }]) }}"
+    />
+  </view>
+  <view
+    wx:if="{{ labelPosition === 'right' }}"
+    class="label-class {{ utils.bem('radio__label', [labelPosition, { disabled }]) }}"
+    bindtap="onClickLabel"
+  >
+    <slot />
+  </view>
+</view>

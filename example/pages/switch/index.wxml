@@ -1,0 +1,90 @@
+<demo-block title="list高度40，合并使用" padding>
+  <view class="switch-list">
+    <view class="switch-list-item" wx:for="{{ list }}">
+      <view>开关</view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="40rpx"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+</demo-block>
+
+<demo-block title="list高度40，拆分使用" padding>
+  <view class="switch-list2">
+    <view class="switch-list-item2" wx:for="{{ list }}">
+      <view>开关</view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="40rpx"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+</demo-block>
+
+<demo-block title="list高度60，混合使用" padding>
+  <view class="switch-list switch-list3">
+    <view class="switch-list-item switch-list-item3" wx:for="{{ list }}">
+      <view>开关</view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="40rpx"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+  <view class="switch-list-item4">
+    <view>开关</view>
+    <wxd-switch
+      checked="{{ checked }}"
+      size="40rpx"
+      active-color="#4388FF"
+      inactive-color="#ccc"
+      bind:change="onChange2"
+    />
+  </view>
+</demo-block>
+
+<demo-block title="list高度70，混合使用" padding>
+  <view class="switch-list5">
+    <view class="switch-list-item switch-list-item5" wx:for="{{ list }}">
+      <view>
+        <view>签收码开关</view>
+        <view class="notice">骑士送达时，提供签收码，确保安全签收</view>
+      </view>
+      <wxd-switch
+        checked="{{ item.checked }}"
+        size="40rpx"
+        active-color="#4388FF"
+        inactive-color="#ccc"
+        data-index="{{ index }}"
+        data-checked="{{ item.checked }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+  <view class="switch-list-item4">
+    <view>签收码开关</view>
+    <wxd-switch
+      checked="{{ checked }}"
+      size="40rpx"
+      active-color="#4388FF"
+      inactive-color="#ccc"
+      bind:change="onChange2"
+    />
+  </view>
+</demo-block>

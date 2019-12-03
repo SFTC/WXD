@@ -1,0 +1,24 @@
+<view class="wxd-loading {{vertical ? 'wxd-loading--vertical' : ''}}">
+  <view
+    class="wxd-loading__wrapper custom-class"
+    style="width: {{ sizeWithUnit }}; height: {{ sizeWithUnit }}"
+  >
+    <view
+      class="wxd-loading__spinner wxd-loading__spinner--{{ type }}"
+      style="color: {{ color }};"
+    >
+      <view
+        wx:if="{{ type === 'spinner' }}"
+        wx:for="item in 12"
+        wx:key="index"
+        class="wxd-loading__dot"
+      />
+    </view>
+  </view>
+  <view 
+    style="font-size: {{textSizeWithUnit}};" 
+    class="wxd-loading__text {{vertical ? 'wxd-loading__text--vertical' : ''}}"
+  >
+    <slot />
+  </view>
+</view>

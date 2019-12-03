@@ -1,0 +1,17 @@
+<demo-block title="勾选在前" padding>
+  <wxd-radio-group value="{{ radio1 }}" data-key="radio1" custom-class="demo-radio-group" bind:change="onChange">
+    <wxd-radio wx:for="{{ name }}" checked-color="#4388ff" name="{{ item }}" custom-class="demo-radio {{ radio1 === item ? 'active' : '' }}">选项名称 </wxd-radio>
+  </wxd-radio-group>
+</demo-block>
+
+<demo-block title="禁用状态" padding>
+  <wxd-radio-group disabled value="{{ radio2 }}" data-key="radio2" custom-class="demo-radio-group" bind:change="onChange">
+    <wxd-radio wx:for="{{ name }}" checked-color="#4388ff" name="{{ item }}" custom-class="demo-radio">选项名称 </wxd-radio>
+  </wxd-radio-group>
+</demo-block>
+
+<demo-block title="勾选在后" padding>
+  <wxd-radio-group value="{{ radio3 }}" data-key="radio3" custom-class="demo-radio-group" bind:change="onChange">
+    <wxd-radio wx:for="{{ name }}" labelPosition="left" checked-color="#4388ff" name="{{ item }}" custom-class="demo-radio demo-radio-behind {{ radio3 === item ? 'active' : '' }}">选项名称 </wxd-radio>
+  </wxd-radio-group>
+</demo-block>

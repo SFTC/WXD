@@ -1,0 +1,73 @@
+/* pages/switch/index.wxss */
+wxd-switch {
+  height: 54rpx;
+}
+
+.switch-list {
+  height: 240rpx;
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+.switch-list-item {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rpx;
+  border-bottom: 1rpx solid #E5E9ED;
+}
+
+.switch-list-item:last-child {
+  border-bottom: none;
+}
+
+.switch-list2 {
+  height: 280rpx;
+}
+
+.switch-list-item2 {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  background: #fff;
+  padding: 0 30rpx 0 40rpx;
+}
+
+.switch-list3 {
+  height: 360rpx;
+  margin-bottom: 20rpx;
+}
+
+.switch-list-item3 {
+  height: 120rpx;
+}
+
+.switch-list-item4 {
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  background: #fff;
+  padding: 0 30rpx 0 40rpx;
+}
+
+.switch-list5 {
+  height: 420rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.switch-list-item5 {
+  height: 140rpx;
+}
+
+.switch-list-item5 .notice {
+  color: #A8B1BD;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,24 @@
+<demo-block title="勾选在前" padding>
+  <wxd-checkbox-group value="{{ result }}" data-key="result" bind:change="onChange">
+    <wxd-checkbox wx:for="{{ list }}" wx:key="*this" name="{{ item }}" checked-color="#4388ff" custom-class="demo-checkbox">
+      复选框 {{ item }}
+    </wxd-checkbox>
+  </wxd-checkbox-group>
+</demo-block>
+
+<demo-block title="禁用状态" padding>
+  <wxd-checkbox disabled value="{{ false }}" custom-class="demo-checkbox">
+    复选框
+  </wxd-checkbox>
+  <wxd-checkbox disabled value="{{ true }}" custom-class="demo-checkbox">
+    复选框
+  </wxd-checkbox>
+</demo-block>
+
+<demo-block title="勾选在后" padding>
+  <wxd-checkbox-group value="{{ result }}" data-key="result" bind:change="onChange">
+    <wxd-checkbox labelPosition="left" wx:for="{{ list }}" wx:key="*this" name="{{ item }}" checked-color="#4388ff" custom-class="demo-checkbox demo-checkbox-behind {{ result.includes(item) ? 'active' : '' }}">
+      复选框 {{ item }}
+    </wxd-checkbox>
+  </wxd-checkbox-group>
+</demo-block>

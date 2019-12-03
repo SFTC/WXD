@@ -1,0 +1,29 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view class="wxd-checkbox custom-class" capture-catch:tap="toggle">
+  <view wx:if="{{ labelPosition === 'left' }}" class="label-class {{ utils.bem('checkbox__label', [labelPosition, { disabled }]) }}" bindtap="onClickLabel">
+    <slot />
+  </view>
+  <view class="wxd-checkbox__icon-wrap" bindtap="toggle">
+    <slot wx:if="{{ useIconSlot }}" name="icon" />
+    <wxd-icon
+      wx:if="{{!useIconSlot && value}}"
+      name="choosed"
+      size="24px"
+      custom-class="icon"
+      color="{{checkedColor}}"
+      class="{{ utils.bem('checkbox__icon', [shape, { disabled, checked: value }]) }}"
+    />
+    <wxd-icon
+      wx:if="{{!useIconSlot && !value}}"
+      name="choose"
+      size="24px"
+      custom-class="icon"
+      color="#ccc"
+      class="{{ utils.bem('checkbox__icon', [shape, { disabled, checked: value }]) }}"
+    />
+  </view>
+  <view wx:if="{{ labelPosition === 'right' }}" class="label-class {{ utils.bem('checkbox__label', [labelPosition, { disabled }]) }}" bindtap="onClickLabel">
+    <slot />
+  </view>
+</view>

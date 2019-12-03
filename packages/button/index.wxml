@@ -1,0 +1,55 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<button
+  id="{{ id }}"
+  class="custom-class {{ utils.bem('button', [type, size, { block, round, plain, square, loading, disabled, hairline, unclickable: disabled || loading }]) }} {{ hairline ? 'van-hairline--surround' : '' }}"
+  hover-class="{{disabled ? '' : 'wxd-button--active hover-class'}}"
+  lang="{{ lang }}"
+  style="{{ style }} {{ customStyle }}"
+  open-type="{{ openType }}"
+  business-id="{{ businessId }}"
+  session-from="{{ sessionFrom }}"
+  send-message-title="{{ sendMessageTitle }}"
+  send-message-path="{{ sendMessagePath }}"
+  send-message-img="{{ sendMessageImg }}"
+  show-message-card="{{ showMessageCard }}"
+  app-parameter="{{ appParameter }}"
+  aria-label="{{ ariaLabel }}"
+  bindtap="{{disabled ? '' : 'onClick'}}"
+  bindgetuserinfo="{{disabled ? '' : 'bindGetUserInfo'}}"
+  bindcontact="{{disabled ? '' : 'bindContact'}}"
+  bindgetphonenumber="{{disabled ? '' : 'bindGetPhoneNumber'}}"
+  binderror="{{disabled ? '' : 'bindError'}}"
+  bindlaunchapp="{{disabled ? '' : 'bindLaunchApp'}}"
+  bindopensetting="{{disabled ? '' : 'bindOpenSetting'}}"
+>
+  <!-- <view class="wxd-button__text">
+    <slot />
+  </view> -->
+  <block wx:if="{{ loading }}">
+    <van-loading
+      custom-class="loading-class"
+      size="{{ loadingSize }}"
+      type="{{ loadingType }}"
+      color="{{ type === 'default' ? '#c9c9c9' : '' }}"
+    />
+    <view
+      wx:if="{{ loadingText }}"
+      class="wxd-button__loading-text"
+    >
+      {{ loadingText }}
+    </view>
+  </block>
+  <block wx:else>
+    <wxd-icon
+      wx:if="{{ icon }}"
+      size="1.2em"
+      name="{{ icon }}"
+      class="wxd-button__icon"
+      custom-style="line-height: inherit;"
+    />
+    <view class="wxd-button__text">
+      <slot />
+    </view>
+  </block>
+</button>
