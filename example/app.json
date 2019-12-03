@@ -60,7 +60,10 @@
     "wxd-icon": "./dist/icon/index",
     "wxd-radio": "./dist/radio/index",
     "wxd-radio-group": "./dist/radio-group/index",
-    "wxd-switch": "./dist/switch/index"
+    "wxd-switch": "./dist/switch/index",
+    "van-tab": "./dist/tab/index",
+    "van-tabs": "./dist/tabs/index",
+    "van-col": "./dist/col/index"
   },
   "sitemapLocation": "sitemap.json"
 }
