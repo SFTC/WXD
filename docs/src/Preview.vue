@@ -3,7 +3,7 @@
     <img :class="['preview-image', `preview-image--${imageName}`]" :src="image">
     <div class="preview-popup">
       <div class="preview-content">
-        <img src="https://img.yzcdn.cn/vant-weapp/qrcode-201808101114.jpg">
+        <img src="http://www.itbbb.com/img/wxd-code.jpg">
         <p>微信扫码体验</p>
       </div>
     </div>
