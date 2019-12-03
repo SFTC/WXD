@@ -24,7 +24,7 @@ WXD 是 SF 小程序 UI 组件库，助力开发者快速搭建小程序应用�
 
 扫描下方小程序二维码，体验组件库示例：
 
-<img src="https://img.yzcdn.cn/wxd/qrcode-201808101114.jpg" width="200" height="200" style="margin-top: 10px;" >
+<img src="http://www.itbbb.com/img/wxd-code.jpg" width="200" height="200" style="margin-top: 10px;" >
 
 ## 使用之前
 
