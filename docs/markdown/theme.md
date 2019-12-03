@@ -77,27 +77,13 @@ Page({
   <wxd-button bind:click="onClick">
     默认按钮
   </wxd-button>
-
-  <wxd-toast id="wxd-toast" />
 </view>
-```
-
-```js
-import Toast from 'path/to/vant-weapp/dist/toast/toast';
-
-Page({
-  onClick() {
-    Toast('我是提示文案，建议不超过十五字~');
-  }
-});
 ```
 
 ```less
 .container {
   --button-border-radius: 10px;
   --button-default-color: #f2f3f5;
-  --toast-max-width: 100px;
-  --toast-background-color: pink;
 }
 ```
 
@@ -109,8 +95,6 @@ Page({
 page {
   --button-border-radius: 10px;
   --button-default-color: #f2f3f5;
-  --toast-max-width: 100px;
-  --toast-background-color: pink;
 }
 ```
 
