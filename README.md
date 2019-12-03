@@ -11,7 +11,7 @@
 </p> -->
 
 <p align="center">
-  🔥 <a href="https://sftc.github.io/WXD/dist/index.html">文档网站</a>
+  🔥 <a href="https://sftc.github.io/WXD">文档网站</a>
 </p>
 
 ---
